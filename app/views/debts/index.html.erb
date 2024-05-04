@@ -41,3 +41,10 @@
     </tbody>
   </table>
 </div>
+
+<div class="digg_pagination" align="center">
+    <div class="page_info">
+      <%= page_entries_info @debts %>
+    </div>
+    <%= will_paginate @debts, :container => false %>
+</div>

@@ -17,10 +17,8 @@ class PeopleController < ApplicationController
 
     @people = Person
       .includes(:user)
-      .includes(:debts)
-      .includes(:payments)
       .where(active: @active)
-      .paginate(page: params[:page], per_page:1000)
+      .paginate(page: params[:page], per_page:20)
       .order(updated_at: :desc)
   end
 

@@ -7,6 +7,7 @@ class PaymentsController < ApplicationController
       .includes(:person)
       .all
       .paginate(page: params[:page], per_page: 20)
+      .order(updated_at: :desc)
   end
 
   # GET /payments/1 or /payments/1.json

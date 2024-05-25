@@ -83,3 +83,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "sidekiq", "~> 7.2"
+
+gem "letter_opener_web", "~> 3.0"
